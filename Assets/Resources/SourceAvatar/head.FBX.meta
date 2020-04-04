@@ -1,0 +1,541 @@
+fileFormatVersion: 2
+guid: 369abb6a2bb3c40fa8c81d5680ee10ac
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Bip001
+    100002: Bip001 Footsteps
+    100004: Bip001 Head
+    100006: Bip001 HeadNub
+    100008: Bip001 L Calf
+    100010: Bip001 L Clavicle
+    100012: Bip001 L Finger0
+    100014: Bip001 L Finger01
+    100016: Bip001 L Finger02
+    100018: Bip001 L Finger0Nub
+    100020: Bip001 L Finger1
+    100022: Bip001 L Finger11
+    100024: Bip001 L Finger12
+    100026: Bip001 L Finger1Nub
+    100028: Bip001 L Finger2
+    100030: Bip001 L Finger21
+    100032: Bip001 L Finger22
+    100034: Bip001 L Finger2Nub
+    100036: Bip001 L Finger3
+    100038: Bip001 L Finger31
+    100040: Bip001 L Finger32
+    100042: Bip001 L Finger3Nub
+    100044: Bip001 L Finger4
+    100046: Bip001 L Finger41
+    100048: Bip001 L Finger42
+    100050: Bip001 L Finger4Nub
+    100052: Bip001 L Foot
+    100054: Bip001 L Forearm
+    100056: Bip001 L Hand
+    100058: Bip001 L Thigh
+    100060: Bip001 L Toe0
+    100062: Bip001 L Toe01
+    100064: Bip001 L Toe02
+    100066: Bip001 L Toe0Nub
+    100068: Bip001 L Toe1
+    100070: Bip001 L Toe11
+    100072: Bip001 L Toe12
+    100074: Bip001 L Toe1Nub
+    100076: Bip001 L Toe2
+    100078: Bip001 L Toe21
+    100080: Bip001 L Toe22
+    100082: Bip001 L Toe2Nub
+    100084: Bip001 L Toe3
+    100086: Bip001 L Toe31
+    100088: Bip001 L Toe32
+    100090: Bip001 L Toe3Nub
+    100092: Bip001 L Toe4
+    100094: Bip001 L Toe41
+    100096: Bip001 L Toe42
+    100098: Bip001 L Toe4Nub
+    100100: Bip001 L UpperArm
+    100102: Bip001 Neck
+    100104: Bip001 Pelvis
+    100106: Bip001 R Calf
+    100108: Bip001 R Clavicle
+    100110: Bip001 R Finger0
+    100112: Bip001 R Finger01
+    100114: Bip001 R Finger02
+    100116: Bip001 R Finger0Nub
+    100118: Bip001 R Finger1
+    100120: Bip001 R Finger11
+    100122: Bip001 R Finger12
+    100124: Bip001 R Finger1Nub
+    100126: Bip001 R Finger2
+    100128: Bip001 R Finger21
+    100130: Bip001 R Finger22
+    100132: Bip001 R Finger2Nub
+    100134: Bip001 R Finger3
+    100136: Bip001 R Finger31
+    100138: Bip001 R Finger32
+    100140: Bip001 R Finger3Nub
+    100142: Bip001 R Finger4
+    100144: Bip001 R Finger41
+    100146: Bip001 R Finger42
+    100148: Bip001 R Finger4Nub
+    100150: Bip001 R Foot
+    100152: Bip001 R Forearm
+    100154: Bip001 R Hand
+    100156: Bip001 R Thigh
+    100158: Bip001 R Toe0
+    100160: Bip001 R Toe01
+    100162: Bip001 R Toe02
+    100164: Bip001 R Toe0Nub
+    100166: Bip001 R Toe1
+    100168: Bip001 R Toe11
+    100170: Bip001 R Toe12
+    100172: Bip001 R Toe1Nub
+    100174: Bip001 R Toe2
+    100176: Bip001 R Toe21
+    100178: Bip001 R Toe22
+    100180: Bip001 R Toe2Nub
+    100182: Bip001 R Toe3
+    100184: Bip001 R Toe31
+    100186: Bip001 R Toe32
+    100188: Bip001 R Toe3Nub
+    100190: Bip001 R Toe4
+    100192: Bip001 R Toe41
+    100194: Bip001 R Toe42
+    100196: Bip001 R Toe4Nub
+    100198: Bip001 R UpperArm
+    100200: Bip001 Spine
+    100202: Bip001 Spine1
+    100204: Cheek_01_L
+    100206: Cheek_01_p_L
+    100208: Cheek_01_p_R
+    100210: Cheek_01_R
+    100212: Cheek_02_L
+    100214: Cheek_02_p_L
+    100216: Cheek_02_p_R
+    100218: Cheek_02_R
+    100220: Cheek_03_L
+    100222: Cheek_03_p_L
+    100224: Cheek_03_p_R
+    100226: Cheek_03_R
+    100228: Cheek_L
+    100230: Cheek_p_L
+    100232: Cheek_p_R
+    100234: Cheek_R
+    100236: Circle001
+    100238: eye_01_L
+    100240: eye_01_p_L
+    100242: eye_01_p_R
+    100244: eye_01_R
+    100246: eye_02_L
+    100248: eye_02_p_L
+    100250: eye_02_p_R
+    100252: eye_02_R
+    100254: eye_03_L
+    100256: eye_03_p_L
+    100258: eye_03_p_R
+    100260: eye_03_R
+    100262: eye_04_L
+    100264: eye_04_p_L
+    100266: eye_04_p_R
+    100268: eye_04_R
+    100270: eye_L
+    100272: eye_LLL
+    100274: eye_p_L
+    100276: eye_p_R
+    100278: eye_R
+    100280: eye_RRR
+    100282: eyeball_L
+    100284: eyeball_p_L
+    100286: eyeball_p_R
+    100288: eyeball_R
+    100290: eyebrow_01_L
+    100292: eyebrow_01_p_L
+    100294: eyebrow_01_p_R
+    100296: eyebrow_01_R
+    100298: eyebrow_02_L
+    100300: eyebrow_02_p_L
+    100302: eyebrow_02_p_R
+    100304: eyebrow_02_R
+    100306: eyebrow_03_L
+    100308: eyebrow_03_p_L
+    100310: eyebrow_03_p_R
+    100312: eyebrow_03_R
+    100314: eyebrow_L
+    100316: eyebrow_p_L
+    100318: eyebrow_p_R
+    100320: eyebrow_R
+    100322: head
+    100324: //RootNode
+    100326: head_all_p_N
+    100328: head_up_N
+    100330: head_up_p_N
+    100332: jaw_01_L
+    100334: jaw_01_p_L
+    100336: jaw_01_p_R
+    100338: jaw_01_R
+    100340: jaw_02_L
+    100342: jaw_02_p_L
+    100344: jaw_02_p_R
+    100346: jaw_02_R
+    100348: jaw_03_N
+    100350: jaw_03_p_N
+    100352: jaw_N
+    100354: jaw_p_N
+    100356: mouth_01_L
+    100358: mouth_01_p_L
+    100360: mouth_01_p_R
+    100362: mouth_01_R
+    100364: mouth_low_03_L
+    100366: mouth_low_03_N
+    100368: mouth_low_03_p_L
+    100370: mouth_low_03_p_N
+    100372: mouth_low_03_p_R
+    100374: mouth_low_03_R
+    100376: mouth_low_N
+    100378: mouth_low_p_N
+    100380: mouth_m_02_L
+    100382: mouth_m_02_N
+    100384: mouth_m_02_p_L
+    100386: mouth_m_02_p_N
+    100388: mouth_m_02_p_R
+    100390: mouth_m_02_R
+    100392: mouth_m_N
+    100394: mouth_m_p_N
+    100396: mouth_N
+    100398: mouth_p_N
+    100400: mouth_up_01_L
+    100402: mouth_up_01_N
+    100404: mouth_up_01_p_L
+    100406: mouth_up_01_p_N
+    100408: mouth_up_01_p_R
+    100410: mouth_up_01_R
+    100412: mouth_up_N
+    100414: mouth_up_p_N
+    100416: nose_01_L
+    100418: nose_01_p_L
+    100420: nose_01_p_R
+    100422: nose_01_R
+    100424: nose_d_01_N
+    100426: nose_d_01_p_N
+    100428: nose_d_02_N
+    100430: nose_d_02_p_N
+    100432: nose_d_p_N
+    100434: nose_N
+    100436: nose_p_N
+    100438: nose_up_N
+    100440: nose_up_p_N
+    400000: Bip001
+    400002: Bip001 Footsteps
+    400004: Bip001 Head
+    400006: Bip001 HeadNub
+    400008: Bip001 L Calf
+    400010: Bip001 L Clavicle
+    400012: Bip001 L Finger0
+    400014: Bip001 L Finger01
+    400016: Bip001 L Finger02
+    400018: Bip001 L Finger0Nub
+    400020: Bip001 L Finger1
+    400022: Bip001 L Finger11
+    400024: Bip001 L Finger12
+    400026: Bip001 L Finger1Nub
+    400028: Bip001 L Finger2
+    400030: Bip001 L Finger21
+    400032: Bip001 L Finger22
+    400034: Bip001 L Finger2Nub
+    400036: Bip001 L Finger3
+    400038: Bip001 L Finger31
+    400040: Bip001 L Finger32
+    400042: Bip001 L Finger3Nub
+    400044: Bip001 L Finger4
+    400046: Bip001 L Finger41
+    400048: Bip001 L Finger42
+    400050: Bip001 L Finger4Nub
+    400052: Bip001 L Foot
+    400054: Bip001 L Forearm
+    400056: Bip001 L Hand
+    400058: Bip001 L Thigh
+    400060: Bip001 L Toe0
+    400062: Bip001 L Toe01
+    400064: Bip001 L Toe02
+    400066: Bip001 L Toe0Nub
+    400068: Bip001 L Toe1
+    400070: Bip001 L Toe11
+    400072: Bip001 L Toe12
+    400074: Bip001 L Toe1Nub
+    400076: Bip001 L Toe2
+    400078: Bip001 L Toe21
+    400080: Bip001 L Toe22
+    400082: Bip001 L Toe2Nub
+    400084: Bip001 L Toe3
+    400086: Bip001 L Toe31
+    400088: Bip001 L Toe32
+    400090: Bip001 L Toe3Nub
+    400092: Bip001 L Toe4
+    400094: Bip001 L Toe41
+    400096: Bip001 L Toe42
+    400098: Bip001 L Toe4Nub
+    400100: Bip001 L UpperArm
+    400102: Bip001 Neck
+    400104: Bip001 Pelvis
+    400106: Bip001 R Calf
+    400108: Bip001 R Clavicle
+    400110: Bip001 R Finger0
+    400112: Bip001 R Finger01
+    400114: Bip001 R Finger02
+    400116: Bip001 R Finger0Nub
+    400118: Bip001 R Finger1
+    400120: Bip001 R Finger11
+    400122: Bip001 R Finger12
+    400124: Bip001 R Finger1Nub
+    400126: Bip001 R Finger2
+    400128: Bip001 R Finger21
+    400130: Bip001 R Finger22
+    400132: Bip001 R Finger2Nub
+    400134: Bip001 R Finger3
+    400136: Bip001 R Finger31
+    400138: Bip001 R Finger32
+    400140: Bip001 R Finger3Nub
+    400142: Bip001 R Finger4
+    400144: Bip001 R Finger41
+    400146: Bip001 R Finger42
+    400148: Bip001 R Finger4Nub
+    400150: Bip001 R Foot
+    400152: Bip001 R Forearm
+    400154: Bip001 R Hand
+    400156: Bip001 R Thigh
+    400158: Bip001 R Toe0
+    400160: Bip001 R Toe01
+    400162: Bip001 R Toe02
+    400164: Bip001 R Toe0Nub
+    400166: Bip001 R Toe1
+    400168: Bip001 R Toe11
+    400170: Bip001 R Toe12
+    400172: Bip001 R Toe1Nub
+    400174: Bip001 R Toe2
+    400176: Bip001 R Toe21
+    400178: Bip001 R Toe22
+    400180: Bip001 R Toe2Nub
+    400182: Bip001 R Toe3
+    400184: Bip001 R Toe31
+    400186: Bip001 R Toe32
+    400188: Bip001 R Toe3Nub
+    400190: Bip001 R Toe4
+    400192: Bip001 R Toe41
+    400194: Bip001 R Toe42
+    400196: Bip001 R Toe4Nub
+    400198: Bip001 R UpperArm
+    400200: Bip001 Spine
+    400202: Bip001 Spine1
+    400204: Cheek_01_L
+    400206: Cheek_01_p_L
+    400208: Cheek_01_p_R
+    400210: Cheek_01_R
+    400212: Cheek_02_L
+    400214: Cheek_02_p_L
+    400216: Cheek_02_p_R
+    400218: Cheek_02_R
+    400220: Cheek_03_L
+    400222: Cheek_03_p_L
+    400224: Cheek_03_p_R
+    400226: Cheek_03_R
+    400228: Cheek_L
+    400230: Cheek_p_L
+    400232: Cheek_p_R
+    400234: Cheek_R
+    400236: Circle001
+    400238: eye_01_L
+    400240: eye_01_p_L
+    400242: eye_01_p_R
+    400244: eye_01_R
+    400246: eye_02_L
+    400248: eye_02_p_L
+    400250: eye_02_p_R
+    400252: eye_02_R
+    400254: eye_03_L
+    400256: eye_03_p_L
+    400258: eye_03_p_R
+    400260: eye_03_R
+    400262: eye_04_L
+    400264: eye_04_p_L
+    400266: eye_04_p_R
+    400268: eye_04_R
+    400270: eye_L
+    400272: eye_LLL
+    400274: eye_p_L
+    400276: eye_p_R
+    400278: eye_R
+    400280: eye_RRR
+    400282: eyeball_L
+    400284: eyeball_p_L
+    400286: eyeball_p_R
+    400288: eyeball_R
+    400290: eyebrow_01_L
+    400292: eyebrow_01_p_L
+    400294: eyebrow_01_p_R
+    400296: eyebrow_01_R
+    400298: eyebrow_02_L
+    400300: eyebrow_02_p_L
+    400302: eyebrow_02_p_R
+    400304: eyebrow_02_R
+    400306: eyebrow_03_L
+    400308: eyebrow_03_p_L
+    400310: eyebrow_03_p_R
+    400312: eyebrow_03_R
+    400314: eyebrow_L
+    400316: eyebrow_p_L
+    400318: eyebrow_p_R
+    400320: eyebrow_R
+    400322: head
+    400324: //RootNode
+    400326: head_all_p_N
+    400328: head_up_N
+    400330: head_up_p_N
+    400332: jaw_01_L
+    400334: jaw_01_p_L
+    400336: jaw_01_p_R
+    400338: jaw_01_R
+    400340: jaw_02_L
+    400342: jaw_02_p_L
+    400344: jaw_02_p_R
+    400346: jaw_02_R
+    400348: jaw_03_N
+    400350: jaw_03_p_N
+    400352: jaw_N
+    400354: jaw_p_N
+    400356: mouth_01_L
+    400358: mouth_01_p_L
+    400360: mouth_01_p_R
+    400362: mouth_01_R
+    400364: mouth_low_03_L
+    400366: mouth_low_03_N
+    400368: mouth_low_03_p_L
+    400370: mouth_low_03_p_N
+    400372: mouth_low_03_p_R
+    400374: mouth_low_03_R
+    400376: mouth_low_N
+    400378: mouth_low_p_N
+    400380: mouth_m_02_L
+    400382: mouth_m_02_N
+    400384: mouth_m_02_p_L
+    400386: mouth_m_02_p_N
+    400388: mouth_m_02_p_R
+    400390: mouth_m_02_R
+    400392: mouth_m_N
+    400394: mouth_m_p_N
+    400396: mouth_N
+    400398: mouth_p_N
+    400400: mouth_up_01_L
+    400402: mouth_up_01_N
+    400404: mouth_up_01_p_L
+    400406: mouth_up_01_p_N
+    400408: mouth_up_01_p_R
+    400410: mouth_up_01_R
+    400412: mouth_up_N
+    400414: mouth_up_p_N
+    400416: nose_01_L
+    400418: nose_01_p_L
+    400420: nose_01_p_R
+    400422: nose_01_R
+    400424: nose_d_01_N
+    400426: nose_d_01_p_N
+    400428: nose_d_02_N
+    400430: nose_d_02_p_N
+    400432: nose_d_p_N
+    400434: nose_N
+    400436: nose_p_N
+    400438: nose_up_N
+    400440: nose_up_p_N
+    2100000: 17 - Default
+    4300000: head
+    4300002: eye_RRR
+    4300004: eye_LLL
+    9500000: //RootNode
+    13700000: eye_LLL
+    13700002: eye_RRR
+    13700004: head
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 0
+    preserveHierarchy: 0
+    indexFormat: 2
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
