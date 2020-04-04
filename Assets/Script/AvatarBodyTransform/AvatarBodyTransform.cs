@@ -12,28 +12,7 @@ public class AvatarBodyTransform : MonoBehaviour
 
     //detect last update time
     private float lastUpdateTm;
-    //detect update interval
-    private float updateInterval;
-    //last face value update time
-    private float lastFaceUpdateTm;
-
-    private void Start()
-    {
-        RefreshAvatarBone();   
-
-        lastFaceUpdateTm = lastUpdateTm = Time.realtimeSinceStartup;
-        updateInterval = 1.0f;
-    }
-
-    //refresh avatar bone bind,and init data
-    public void RefreshAvatar()
-    {
-        RefreshAvatarBone();
-        lastFaceUpdateTm = lastUpdateTm = Time.realtimeSinceStartup;
-        updateInterval = 1.0f;
-
-    }
-
+    
 
     int poseIdx = 0;
     float deltaTime = 0.0f;
@@ -41,12 +20,12 @@ public class AvatarBodyTransform : MonoBehaviour
     {
         if (AvatarBone.pelvis == null)
         {
-            RefreshAvatar();
+            AvatarBone.RefreshAvatarBone(GameObject.Find("avatar_root"));
             return;
         }
         
         deltaTime += Time.deltaTime;
-        if(deltaTime > 1.0f) // 0.5sec
+        if(deltaTime > 0.3f) // 0.5sec
         {
             //int[] poseArray = {0, 2, 4, 6, 8, 18};
             // int[] poseArray = {0, 2, 4, 6, 8, 18, 20, 22, 24};
@@ -59,23 +38,15 @@ public class AvatarBodyTransform : MonoBehaviour
                 poseIdx = 0;
             
             loadCustomPose("pose/"+pose +".json");
-//            Debug.Log(">>pose: " + "pose/"+pose +".json, " + deltaTime);
 
+            // reset update time
             deltaTime = 0.0f;
-
-            float currentTm = Time.realtimeSinceStartup;
-            updateInterval = currentTm - lastUpdateTm;
-            lastUpdateTm = currentTm;
+            // Time.fixedDeltaTime;
+            lastUpdateTm = Time.realtimeSinceStartup;
         }
     }
 
-    //refresh avatar bone
-    private void RefreshAvatarBone()
-    {
-        AvatarBone.RefreshAvatarBone(GameObject.Find("avatar_root"));
-    }
     //load tpose json for current avatar 
-
     public void loadCustomPose(string path)
     {   
         string tposeJson = Path.Combine(Application.streamingAssetsPath, path);
@@ -100,11 +71,8 @@ public class AvatarBodyTransform : MonoBehaviour
             AvatarBone.updateFromTransformModel(JsonUtility.FromJson<TransformJsonModel>(jsonStr), false);
     }
 
-    private void OnDestroy()
-    {
-        // loadInitPose(LoadInitPoseWithHead);
-    }
     //for test file
+    
     private int frame = 0;
     //for test
     public void poseSnapToJson()
