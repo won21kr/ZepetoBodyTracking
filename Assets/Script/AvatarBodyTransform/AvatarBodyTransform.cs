@@ -18,11 +18,8 @@ public class AvatarBodyTransform : MonoBehaviour
     float deltaTime = 0.0f;
     private void Update()
     {
-        if (AvatarBone.pelvis == null)
-        {
-            AvatarBone.FindAvatarBone(RootBone);
-            return;
-        }
+        if (!AvatarBone.isAvatarInitialized())
+            AvatarBone.updateAvatarBone(RootBone);
         
         deltaTime += Time.deltaTime;
         if(deltaTime > 0.3f) // 0.5sec
