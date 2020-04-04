@@ -885,7 +885,7 @@ MonoBehaviour:
     active: 0
     asset: {fileID: 0}
     color: {r: 1, g: 1, b: 1, a: 1}
-  HashKey: zptjpn
+  HashKey: zepeto
 --- !u!4 &667690825
 Transform:
   m_ObjectHideFlags: 0

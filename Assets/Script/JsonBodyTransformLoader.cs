@@ -4,7 +4,7 @@ using System.IO;
 using System.Text;
 using UnityEngine;
 
-public class AvatarBodyTransform : MonoBehaviour
+public class JsonBodyTransformLoader : MonoBehaviour
 {
     //bind bone class
     public SnowAvatarBone AvatarBone = new SnowAvatarBone();

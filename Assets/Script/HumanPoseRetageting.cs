@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-public class HumanPoseTransferRealtime : MonoBehaviour {
+public class HumanPoseRetageting : MonoBehaviour {
     public GameObject sourceGo;
     public GameObject targetGo;
 
