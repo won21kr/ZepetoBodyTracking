@@ -926,6 +926,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sourceGo: {fileID: 3218707237252846218}
   targetGo: {fileID: 667690823}
+--- !u!1 &673114232 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8183175707043953289, guid: 02a63c58595ef4f59a8d9b9598b77e62,
+    type: 3}
+  m_PrefabInstance: {fileID: 4701835612535006982}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &687902800
 Transform:
   m_ObjectHideFlags: 0
@@ -2056,6 +2062,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7920534019320673675, guid: 02a63c58595ef4f59a8d9b9598b77e62,
+        type: 3}
+      propertyPath: RootBone
+      value: 
+      objectReference: {fileID: 673114232}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02a63c58595ef4f59a8d9b9598b77e62, type: 3}
 --- !u!4 &4839467134359917838

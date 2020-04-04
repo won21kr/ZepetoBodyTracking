@@ -20,7 +20,7 @@ public class AvatarBodyTransform : MonoBehaviour
     {
         if (AvatarBone.pelvis == null)
         {
-            AvatarBone.RefreshAvatarBone(GameObject.Find("avatar_root"));
+            AvatarBone.FindAvatarBone(RootBone);
             return;
         }
         
@@ -72,7 +72,7 @@ public class AvatarBodyTransform : MonoBehaviour
     }
 
     //for test file
-    
+
     private int frame = 0;
     //for test
     public void poseSnapToJson()

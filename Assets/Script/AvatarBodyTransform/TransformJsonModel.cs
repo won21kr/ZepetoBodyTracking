@@ -188,21 +188,18 @@ public class TransformJsonObject
     public Quaternion getRotation()
     {
         if (localRotation != null)
-        {
             return arrayToQuaternion(localRotation);
-        }
+
         else
-        {
             return Quaternion.Euler(localAngle[0], localAngle[1], localAngle[2]);
-        }
+
     }
 
     public TransformJsonObject(Transform transform)
     {
         if (transform == null)
-        {
             return;
-        }
+        
         // this.localPosition = vector3ToArray(transform.localPosition);
         this.localRotation = quaternionToArray(transform.localRotation);
         // this.localAngle = quaternionToOAngle(transform.localEulerAngles);

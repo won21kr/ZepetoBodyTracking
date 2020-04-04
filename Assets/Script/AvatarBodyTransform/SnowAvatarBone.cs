@@ -17,6 +17,10 @@ public class SnowAvatarBone
     {
         if (transformJsonModel != null)
         {
+            // var jsonObjects = transformJsonModel.GetCon
+            // foreach(TransformJsonObject transform in transformJsonModel) {
+            // }
+  
             applyModelToTransform(pelvis, transformJsonModel.pelvis);
             applyModelToTransform(waist, transformJsonModel.waist);
             applyModelToTransform(chest, transformJsonModel.chest);
@@ -69,15 +73,23 @@ public class SnowAvatarBone
             applyModelToTransform(rightFoot, transformJsonModel.rightFoot);
         }
     }
-
-    public virtual void RefreshAvatarBone(GameObject avatarObj)
+    
+    Dictionary <string, Transform> BodyTransforms = new Dictionary <string, Transform>();
+     
+    public virtual void FindAvatarBone(GameObject avatarObj)
     {
+        var transforms = avatarObj.GetComponentsInChildren<Transform>();
+
+        foreach(KeyValuePair<string, Transform> bodyTransform in BodyTransforms) {
+            Debug.Log($"{bodyTransform.Key}, {bodyTransform.Value}");
+        } 
+
         string name = "Bip001 ";
         // this.avatarObj = avatarObj;
         
         BipRoot = getTransform(GameObject.Find("Bip001"));
-        LForeTwist = getTransform(GameObject.Find("Bip001 L ForeTwist"));
-        RForeTwist = getTransform(GameObject.Find("Bip001 R ForeTwist"));;
+        LForeTwist = getTransform(GameObject.Find($"{name}L ForeTwist"));
+        RForeTwist = getTransform(GameObject.Find($"{name}R ForeTwist"));;
 
         pelvis = getTransform(GameObject.Find(name + "Pelvis")); // pelvis error
 
@@ -121,26 +133,7 @@ public class SnowAvatarBone
         leftCalf = getTransform(GameObject.Find(name + "L Calf"));
         //左脚脚踝节点
         leftFoot = getTransform(GameObject.Find(name + "L Foot"));
-        //左脚前脚趾节点
-        // leftToe0 = getTransform(GameObject.Find(name + "L Toe0"));
-        // leftToe0_1 = getTransform(GameObject.Find(name + "L Toe01"));
-        // leftToe0_2 = getTransform(GameObject.Find(name + "L Toe02"));
 
-        // leftToe1 = getTransform(GameObject.Find(name + "L Toe1"));
-        // leftToe1_1 = getTransform(GameObject.Find(name + "L Toe11"));
-        // leftToe1_2 = getTransform(GameObject.Find(name + "L Toe12"));
-
-        // leftToe2 = getTransform(GameObject.Find(name + "L Toe2"));
-        // leftToe2_1 = getTransform(GameObject.Find(name + "L Toe21"));
-        // leftToe2_2 = getTransform(GameObject.Find(name + "L Toe22"));
-
-        // leftToe3 = getTransform(GameObject.Find(name + "L Toe3"));
-        // leftToe3_1 = getTransform(GameObject.Find(name + "L Toe31"));
-        // leftToe3_2 = getTransform(GameObject.Find(name + "L Toe31"));
-
-        // leftToe4 = getTransform(GameObject.Find(name + "L Toe4"));
-        // leftToe4_1 = getTransform(GameObject.Find(name + "L Toe41"));
-        // leftToe4_2 = getTransform(GameObject.Find(name + "L Toe42"));
 
         //右侧
         //左臂上方节点,左锁骨位置
@@ -177,26 +170,50 @@ public class SnowAvatarBone
         rightCalf = getTransform(GameObject.Find(name + "R Calf"));
         //右脚脚踝节点
         rightFoot = getTransform(GameObject.Find(name + "R Foot"));
+        
+/*        
+        //左脚前脚趾节点
+        leftToe0 = getTransform(GameObject.Find(name + "L Toe0"));
+        leftToe0_1 = getTransform(GameObject.Find(name + "L Toe01"));
+        leftToe0_2 = getTransform(GameObject.Find(name + "L Toe02"));
+
+        leftToe1 = getTransform(GameObject.Find(name + "L Toe1"));
+        leftToe1_1 = getTransform(GameObject.Find(name + "L Toe11"));
+        leftToe1_2 = getTransform(GameObject.Find(name + "L Toe12"));
+
+        leftToe2 = getTransform(GameObject.Find(name + "L Toe2"));
+        leftToe2_1 = getTransform(GameObject.Find(name + "L Toe21"));
+        leftToe2_2 = getTransform(GameObject.Find(name + "L Toe22"));
+
+        leftToe3 = getTransform(GameObject.Find(name + "L Toe3"));
+        leftToe3_1 = getTransform(GameObject.Find(name + "L Toe31"));
+        leftToe3_2 = getTransform(GameObject.Find(name + "L Toe31"));
+
+        leftToe4 = getTransform(GameObject.Find(name + "L Toe4"));
+        leftToe4_1 = getTransform(GameObject.Find(name + "L Toe41"));
+        leftToe4_2 = getTransform(GameObject.Find(name + "L Toe42"));
+
         //右脚前脚趾节点
-        // rightToe0 = getTransform(GameObject.Find(name + "R Toe0"));
-        // rightToe0_1 = getTransform(GameObject.Find(name + "R Toe01"));
-        // rightToe0_2 = getTransform(GameObject.Find(name + "R Toe02"));
+        rightToe0 = getTransform(GameObject.Find(name + "R Toe0"));
+        rightToe0_1 = getTransform(GameObject.Find(name + "R Toe01"));
+        rightToe0_2 = getTransform(GameObject.Find(name + "R Toe02"));
 
-        // rightToe1 = getTransform(GameObject.Find(name + "R Toe1"));
-        // rightToe1_1 = getTransform(GameObject.Find(name + "R Toe11"));
-        // rightToe1_2 = getTransform(GameObject.Find(name + "R Toe12"));
+        rightToe1 = getTransform(GameObject.Find(name + "R Toe1"));
+        rightToe1_1 = getTransform(GameObject.Find(name + "R Toe11"));
+        rightToe1_2 = getTransform(GameObject.Find(name + "R Toe12"));
 
-        // rightToe2 = getTransform(GameObject.Find(name + "R Toe2"));
-        // rightToe2_1 = getTransform(GameObject.Find(name + "R Toe21"));
-        // rightToe2_2 = getTransform(GameObject.Find(name + "R Toe22"));
+        rightToe2 = getTransform(GameObject.Find(name + "R Toe2"));
+        rightToe2_1 = getTransform(GameObject.Find(name + "R Toe21"));
+        rightToe2_2 = getTransform(GameObject.Find(name + "R Toe22"));
 
-        // rightToe3 = getTransform(GameObject.Find(name + "R Toe3"));
-        // rightToe3_1 = getTransform(GameObject.Find(name + "R Toe31"));
-        // rightToe3_2 = getTransform(GameObject.Find(name + "R Toe31"));
+        rightToe3 = getTransform(GameObject.Find(name + "R Toe3"));
+        rightToe3_1 = getTransform(GameObject.Find(name + "R Toe31"));
+        rightToe3_2 = getTransform(GameObject.Find(name + "R Toe31"));
 
-        // rightToe4 = getTransform(GameObject.Find(name + "R Toe4"));
-        // rightToe4_1 = getTransform(GameObject.Find(name + "R Toe41"));
-        // rightToe4_2 = getTransform(GameObject.Find(name + "R Toe42"));
+        rightToe4 = getTransform(GameObject.Find(name + "R Toe4"));
+        rightToe4_1 = getTransform(GameObject.Find(name + "R Toe41"));
+        rightToe4_2 = getTransform(GameObject.Find(name + "R Toe42"));
+*/        
         
     }
 
@@ -232,23 +249,7 @@ public class SnowAvatarBone
         transformJsonModel.leftThigh = new TransformJsonObject(leftThigh);
         transformJsonModel.leftCalf = new TransformJsonObject(leftCalf);
         transformJsonModel.leftFoot = new TransformJsonObject(leftFoot);
-        transformJsonModel.leftToe0 = new TransformJsonObject(leftToe0);
 
-        transformJsonModel.leftToe0 = new TransformJsonObject(leftToe0);
-        transformJsonModel.leftToe0_1 = new TransformJsonObject(leftToe0_1);
-        transformJsonModel.leftToe0_2 = new TransformJsonObject(leftToe0_2);
-        transformJsonModel.leftToe1 = new TransformJsonObject(leftToe1);
-        transformJsonModel.leftToe1_1 = new TransformJsonObject(leftToe1_1);
-        transformJsonModel.leftToe1_2 = new TransformJsonObject(leftToe1_2);
-        transformJsonModel.leftToe2 = new TransformJsonObject(leftToe2);
-        transformJsonModel.leftToe2_1 = new TransformJsonObject(leftToe2_1);
-        transformJsonModel.leftToe2_2 = new TransformJsonObject(leftToe2_2);
-        transformJsonModel.leftToe3 = new TransformJsonObject(leftToe3);
-        transformJsonModel.leftToe3_1 = new TransformJsonObject(leftToe3_1);
-        transformJsonModel.leftToe3_2 = new TransformJsonObject(leftToe3_2);
-        transformJsonModel.leftToe4 = new TransformJsonObject(leftToe4);
-        transformJsonModel.leftToe4_1 = new TransformJsonObject(leftToe4_1);
-        transformJsonModel.leftToe4_2 = new TransformJsonObject(leftToe4_2);
         //右侧部分
         transformJsonModel.rightClavicle = new TransformJsonObject(rightClavicle);
         transformJsonModel.rightUpperArm = new TransformJsonObject(rightUpperArm);
@@ -274,6 +275,23 @@ public class SnowAvatarBone
         transformJsonModel.rightCalf = new TransformJsonObject(rightCalf);
         transformJsonModel.rightFoot = new TransformJsonObject(rightFoot);
 
+/*
+        transformJsonModel.leftToe0 = new TransformJsonObject(leftToe0);
+        transformJsonModel.leftToe0_1 = new TransformJsonObject(leftToe0_1);
+        transformJsonModel.leftToe0_2 = new TransformJsonObject(leftToe0_2);
+        transformJsonModel.leftToe1 = new TransformJsonObject(leftToe1);
+        transformJsonModel.leftToe1_1 = new TransformJsonObject(leftToe1_1);
+        transformJsonModel.leftToe1_2 = new TransformJsonObject(leftToe1_2);
+        transformJsonModel.leftToe2 = new TransformJsonObject(leftToe2);
+        transformJsonModel.leftToe2_1 = new TransformJsonObject(leftToe2_1);
+        transformJsonModel.leftToe2_2 = new TransformJsonObject(leftToe2_2);
+        transformJsonModel.leftToe3 = new TransformJsonObject(leftToe3);
+        transformJsonModel.leftToe3_1 = new TransformJsonObject(leftToe3_1);
+        transformJsonModel.leftToe3_2 = new TransformJsonObject(leftToe3_2);
+        transformJsonModel.leftToe4 = new TransformJsonObject(leftToe4);
+        transformJsonModel.leftToe4_1 = new TransformJsonObject(leftToe4_1);
+        transformJsonModel.leftToe4_2 = new TransformJsonObject(leftToe4_2);
+
         transformJsonModel.rightToe0 = new TransformJsonObject(rightToe0);
         transformJsonModel.rightToe0_1 = new TransformJsonObject(rightToe0_1);
         transformJsonModel.rightToe0_2 = new TransformJsonObject(rightToe0_2);
@@ -288,7 +306,7 @@ public class SnowAvatarBone
         transformJsonModel.rightToe3_2 = new TransformJsonObject(rightToe3_2);
         transformJsonModel.rightToe4 = new TransformJsonObject(rightToe4);
         transformJsonModel.rightToe4_1 = new TransformJsonObject(rightToe4_1);
-        transformJsonModel.rightToe4_2 = new TransformJsonObject(rightToe4_2);
+        transformJsonModel.rightToe4_2 = new TransformJsonObject(rightToe4_2);*/
         return JsonUtility.ToJson(transformJsonModel, true);
     }
   
@@ -298,6 +316,7 @@ public class SnowAvatarBone
         if (gb == null) return null;
         return gb.GetComponent<Transform>();
     }
+
     [HideInInspector] public Transform pelvis;
     [HideInInspector] public Transform BipRoot;
     //腰部
@@ -368,27 +387,7 @@ public class SnowAvatarBone
     //左脚脚踝节点
     [HideInInspector] public Transform leftFoot;
 
-    //左脚前脚趾节点
-    [HideInInspector] public Transform leftToe0;
-    [HideInInspector] public Transform leftToe0_1;
-    [HideInInspector] public Transform leftToe0_2;
-    [HideInInspector] public Transform leftToe1;
-    [HideInInspector] public Transform leftToe1_1;
-    [HideInInspector] public Transform leftToe1_2;
-
-    [HideInInspector] public Transform leftToe2;
-    [HideInInspector] public Transform leftToe2_1;
-    [HideInInspector] public Transform leftToe2_2;
-
-    [HideInInspector] public Transform leftToe3;
-    [HideInInspector] public Transform leftToe3_1;
-    [HideInInspector] public Transform leftToe3_2;
-    [HideInInspector] public Transform leftToe4;
-    [HideInInspector] public Transform leftToe4_1;
-    [HideInInspector] public Transform leftToe4_2;
-
     ////////////////右侧信息/////////////////////
-
     //右臂上方节点,右锁骨位置
     [HideInInspector] public Transform rightClavicle;
 
@@ -444,6 +443,26 @@ public class SnowAvatarBone
     //右脚脚踝节点
     [HideInInspector] public Transform rightFoot;
 
+/*
+    //左脚前脚趾节点
+    [HideInInspector] public Transform leftToe0;
+    [HideInInspector] public Transform leftToe0_1;
+    [HideInInspector] public Transform leftToe0_2;
+    [HideInInspector] public Transform leftToe1;
+    [HideInInspector] public Transform leftToe1_1;
+    [HideInInspector] public Transform leftToe1_2;
+
+    [HideInInspector] public Transform leftToe2;
+    [HideInInspector] public Transform leftToe2_1;
+    [HideInInspector] public Transform leftToe2_2;
+
+    [HideInInspector] public Transform leftToe3;
+    [HideInInspector] public Transform leftToe3_1;
+    [HideInInspector] public Transform leftToe3_2;
+    [HideInInspector] public Transform leftToe4;
+    [HideInInspector] public Transform leftToe4_1;
+    [HideInInspector] public Transform leftToe4_2;
+
     //右脚前脚趾节点
     [HideInInspector] public Transform rightToe0;
     [HideInInspector] public Transform rightToe0_1;
@@ -462,7 +481,7 @@ public class SnowAvatarBone
     [HideInInspector] public Transform rightToe4;
     [HideInInspector] public Transform rightToe4_1;
     [HideInInspector] public Transform rightToe4_2;
-
+*/
 
     //extra
     public Transform LForeTwist;
