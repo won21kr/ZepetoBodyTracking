@@ -1,7 +1,0 @@
-﻿小K动捕专业版文件说明
-
-model.fbx:	标准骨骼动画模型
-model.bip:	正常帧数动作文件
-model_10.bip:	1倍减帧动作文件
-t-pose.fbx:	t-pose模型
-a-pose.fbx:	a-pose模型
